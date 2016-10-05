@@ -1,12 +1,14 @@
 from __future__ import division
 
-__credits__ = "Robert Kern"
-__url__ = "https://groups.google.com/forum/#!topic/comp.lang.python/0JiqYeo0qu4"
-
 import numpy as np
 import pandas as pd
 
 from scipy.spatial.distance import euclidean
+
+__credits__ = "Robert Kern"
+__url__ = ("https://groups.google.com/forum/#!topic/comp.lang.python/"
+           "0JiqYeo0qu4")
+
 
 def point_to_plane_distance(abcd, point):
     """
@@ -106,7 +108,7 @@ def point_to_segment_distance(abcd, point, xyz):
 
     a, b, c, d = abcd
     p, q, r = point
-    l = ((d*-1.0) - p*a - b*q -c*r) / (a**2 +b**2 +c**2)
+    l = ((d*-1.0) - p*a - b*q - c*r) / (a**2 + b**2 + c**2)
     extreme = np.array([p + l*a, q + l*b, r + l*c])
 
     for i in range(xyz.shape[-1]):

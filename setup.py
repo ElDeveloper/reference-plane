@@ -8,7 +8,6 @@
 # ----------------------------------------------------------------------------
 
 from distutils.core import setup
-from glob import glob
 
 __version__ = "0.0.1-dev"
 __maintainer__ = "Reference Plane Developers"
